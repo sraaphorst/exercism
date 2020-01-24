@@ -1,0 +1,1 @@
+{"isbn-verifier-test" ["X-is-only-valid-as-a-check-digit" "check-digit-is-a-character-other-than-X" "invalid-character-in-isbn" "too-long-isbn"]}

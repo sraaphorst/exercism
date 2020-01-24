@@ -1,5 +1,3 @@
-% By Sebastian Raaphorst, 2020.
-
 % Please visit https://exercism.io/tracks/prolog/installation
 % for instructions on setting up prolog.
 % Visit https://exercism.io/tracks/prolog/tests
@@ -8,4 +6,6 @@
 % Replace the goal below with
 % your implementation.
 
-hello_world('Hello World!').
+create(false).
+
+attack(false).
