@@ -2,6 +2,8 @@
 
 https://exercism.io
 
+## Clojure
+
 To test a clojure file:
 * lein test
 
