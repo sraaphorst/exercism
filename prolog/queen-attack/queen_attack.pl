@@ -17,4 +17,4 @@ attack((X1,Y1), (X2,Y2)) :-
     create((X1,Y1)), create((X2,Y2)),
     (X1 #= X2;
      Y1 #= Y2;
-     (abs(X1 - X1) #= abs(Y1 - Y2)).
+     (abs(X1 - X2) #= abs(Y1 - Y2)).
