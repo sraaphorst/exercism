@@ -7,7 +7,7 @@
 
 ;; Map the 10 functions to a list of 10 numbers and check if valid.
 (defn ^:private valid-isbn-nums? [isbn-nums]
-  (= 0 (mod (reduce + (map #(%1 %2) isbn-funcs isbn-nums)) 11)))
+  (zero? (mod (reduce + (map #(%1 %2) isbn-funcs isbn-nums)) 11)))
 
 ;; Correct format?
 (defn ^:private correct-isbn-format? [isbn-code]

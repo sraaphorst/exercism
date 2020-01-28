@@ -4,14 +4,13 @@
 (defn run-length-encode
   "encodes a string with run-length-encoding"
   [plain-text]
-  (loop [remaining-text plain-text
+  (loop [[k & ks] plain-text
          cipher-text ""]
-    (if (empty? remaining-text)
+    (if (nil? k)
       cipher-text
-      (let [k (first remaining-text)
-            num (count (take-while #(= % k) remaining-text))
+      (let [num (inc (count (take-while #{k} ks)))
             out (if (= 1 num) k (str num k))
-            rest (drop num remaining-text)]
+            rest (drop-while #{k} ks)]
         (recur rest (str cipher-text out))))))
 
 (defn run-length-decode
@@ -24,7 +23,6 @@
       plain-text
       (let [num' (apply str (take-while #(Character/isDigit %) remaining-text))
             num (if (empty? num') 1 (Integer. num'))
-            intermediate-text (drop-while #(Character/isDigit %) remaining-text)
-            k (first intermediate-text)
-            out (apply str (repeat num k))]
-        (recur (rest intermediate-text) (str plain-text out))))))
+            [k & ks] (drop-while #(Character/isDigit %) remaining-text)
+             out (apply str (repeat num k))]
+            (recur ks (str plain-text out))))))
