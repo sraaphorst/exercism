@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 % Please visit https://exercism.io/tracks/prolog/installation
 % for instructions on setting up prolog.
 % Visit https://exercism.io/tracks/prolog/tests
@@ -10,7 +9,7 @@
 create(false).
 
 attack(false).
-=======
+
 % queens_attack.pl
 % By Sebastian Raaphorst, 2020.
 
@@ -31,4 +30,4 @@ attack((X1,Y1), (X2,Y2)) :-
     (X1 #= X2;
      Y1 #= Y2;
      (abs(X1 - X2) #= abs(Y1 - Y2)).
->>>>>>> 83361634f1ce485c1e1da2fa6388891ec778adba
+     
